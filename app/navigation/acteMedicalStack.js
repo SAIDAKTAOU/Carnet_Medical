@@ -16,9 +16,7 @@ const Stack = createStackNavigator();
 
 export default function ActeMedicalStack() {
   return (
-    <Stack.Navigator screenOptions={{
-      headerShown: false
-    }}>
+    <Stack.Navigator screenOptions={{ headerShown:false }} >
       <Stack.Screen name="Acte Medical" component={ActeMedical} />
       <Stack.Screen name="Consultation" component={Consultation} options={{
         headerTitle: 'Consultation'

@@ -10,6 +10,9 @@ import FlatButton from '../../shared/button';
 
 const RendezVousSchema = yup.object({
     name: yup.string().required(),
+    adresse:yup.string().required(),
+    date:yup.string().required(),
+    heure:yup.string().required()
 })
 
 export default function AddRendezVous({ addRendezVous }){

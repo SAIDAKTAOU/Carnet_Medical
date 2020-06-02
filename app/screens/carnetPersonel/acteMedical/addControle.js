@@ -11,6 +11,9 @@ import FlatButton from '../../../shared/button';
 
 const ControleSchema = yup.object({
     name: yup.string().required(),
+    specialite: yup.string().required(),
+    date: yup.string().required(),
+    remarque: yup.string().required(),
 })
 
 export default function AddControle({ addControle}){

@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import { View, Text, StyleSheet, TouchableOpacity,Keyboard, FlatList, Modal, TouchableWithoutFeedback} from 'react-native';
 
 import { MaterialIcons,MaterialCommunityIcons } from '@expo/vector-icons';
-
+import { DataTable } from 'react-native-paper';
 import { globalStyles } from '../../styles/global';
 import Card from '../../shared/card';
 import AddAntMedicaux from './addAntMedicaux';
@@ -49,18 +49,19 @@ export default function AntecedansMedicaux({ navigation }){
             {/** 
             <MaterialIcons name='add' size={28} onPress={() => setModalOpen(true)} style={styles.modalToggle} />
            */}
-            
+                <DataTable style={styles.datatable}>
+        <DataTable.Header>
+          <DataTable.Title>Nom </DataTable.Title>
+        </DataTable.Header>
             <FlatList
               data={antMed}
               renderItem={({ item }) => (
-                <TouchableOpacity>
-                <View style={styles.container}>
-                <MaterialCommunityIcons style={styles.icon} name="delete" size={24} color="black" />
-                 <Text style={globalStyles.titleText}>{item.name}</Text>
-                </View>
-                </TouchableOpacity>
+                <DataTable.Row>
+                <DataTable.Cell>{item.name}</DataTable.Cell>
+                </DataTable.Row>
                 )}
             />
+            </DataTable>
         </View>
     )
 }

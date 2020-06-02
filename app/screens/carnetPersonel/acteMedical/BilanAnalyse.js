@@ -1,10 +1,7 @@
-
-
-
 import React, { useState } from 'react';
 import { StyleSheet, View ,Keyboard,TouchableWithoutFeedback, Text, FlatList,Modal, TouchableOpacity} from 'react-native';
-
-import { MaterialIcons, MaterialCommunityIcons } from '@expo/vector-icons';
+import { DataTable } from 'react-native-paper';
+import { MaterialIcons, MaterialCommunityIcons,Ionicons } from '@expo/vector-icons';
 
 import { globalStyles } from '../../../styles/global';
 import Card from '../../../shared/card';
@@ -35,7 +32,7 @@ export default function BilanAnalyse({ navigation }){
             <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
             <View style={styles.modalContent}>
             <MaterialIcons name='close' style={{...styles.modalToggle, ...styles.modalClose}} size={28} onPress={() => setModalOpen(false)} />
-            <Text style={styles.text1}>Entrer les information</Text>
+    
                 <AddBilanAnalyse addBilanAnalyse={addBilanAnalyse} />
             </View>
             </TouchableWithoutFeedback>
@@ -44,21 +41,26 @@ export default function BilanAnalyse({ navigation }){
             <MaterialIcons name="add-box" size={28} color="black"  onPress={() => setModalOpen(true)} style={styles.modalToggle} />
 {/*     <MaterialIcons name='add' size={28} onPress={() => setModalOpen(true)} style={styles.modalToggle} />
       */}     
-            
+               <DataTable style={styles.datatable}>
+        <DataTable.Header>
+          <DataTable.Title>Nom </DataTable.Title>
+          <DataTable.Title >Date</DataTable.Title>
+          <DataTable.Title>prix</DataTable.Title>
+        </DataTable.Header>
             <FlatList
               data={bilanAnalyse}
               renderItem={({ item }) => (
-                <TouchableOpacity onPress={ () => navigation.navigate('BilanAnalyseReview', item)}>
-                  
-                  <View style={styles.container}>
-                  <MaterialCommunityIcons style={styles.icon} name="gesture-tap" size={24} color="black" />
-                   <Text style={styles.display}>{item.name}</Text>
-                  </View>
-                 
-                 </TouchableOpacity>
+                <DataTable.Row>
+                <DataTable.Cell>{item.name}</DataTable.Cell>
+                <DataTable.Cell >{item.date}</DataTable.Cell>
+                    <DataTable.Cell>{item.prix}</DataTable.Cell>
+                </DataTable.Row>
                 )}
             />
-
+            </DataTable>
+<TouchableOpacity onPress={() => navigation.goBack()}>
+            <Ionicons style={styles.iconBack} name="ios-arrow-back" size={28} color="black" />
+            </TouchableOpacity>
         </View>
     )
 }
@@ -110,6 +112,10 @@ const styles=StyleSheet.create({
         fontSize:16,
         marginLeft:10,
         marginTop:14,
+    }, 
+    iconBack:{
+        paddingTop:380,
+        paddingLeft:30
     }
   })
 

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { StyleSheet, View ,Keyboard,TouchableWithoutFeedback, Text, FlatList,Modal, TouchableOpacity} from 'react-native';
-
+import { DataTable } from 'react-native-paper';
 import { MaterialIcons, MaterialCommunityIcons } from '@expo/vector-icons';
 
 import { globalStyles } from '../../styles/global';
@@ -39,21 +39,25 @@ export default function HabitudeAlcool({ navigation }){
             <MaterialIcons name="add-box" size={28} color="black"  onPress={() => setModalOpen(true)} style={styles.modalToggle} />
 {/*     <MaterialIcons name='add' size={28} onPress={() => setModalOpen(true)} style={styles.modalToggle} />
       */}     
-            
+               <DataTable style={styles.datatable}>
+        <DataTable.Header>
+          <DataTable.Title>Nom </DataTable.Title>
+          <DataTable.Title >info</DataTable.Title>
+          <DataTable.Title>date</DataTable.Title>
+          <DataTable.Title>status</DataTable.Title>
+        </DataTable.Header>
             <FlatList
               data={habitudeAlcool}
               renderItem={({ item }) => (
-                <TouchableOpacity onPress={ () => navigation.navigate('HabitudeAlcoolReview', item)}>
-                  
-                  <View style={styles.container}>
-                  <MaterialCommunityIcons style={styles.icon} name="gesture-tap" size={24} color="black" />
-                   <Text style={styles.display}>{item.name}</Text>
-                  </View>
-                 
-                 </TouchableOpacity>
+                <DataTable.Row>
+                <DataTable.Cell>{item.name}</DataTable.Cell>
+                <DataTable.Cell >{item.info}</DataTable.Cell>
+                <DataTable.Cell >{item.date}</DataTable.Cell>
+                <DataTable.Cell >{item.bien}</DataTable.Cell>
+                </DataTable.Row>
                 )}
             />
-
+</DataTable>
         </View>
     )
 }

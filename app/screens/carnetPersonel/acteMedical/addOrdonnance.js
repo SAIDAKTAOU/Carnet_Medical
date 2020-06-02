@@ -11,6 +11,9 @@ import FlatButton from '../../../shared/button';
 
 const OrdonnanceSchema = yup.object({
     name: yup.string().required(),
+    adresse: yup.string().required(),
+    date: yup.string().required(),
+    prix: yup.string().required(),
 })
 
 export default function AddOrdonnance({ addOrdonnance }){

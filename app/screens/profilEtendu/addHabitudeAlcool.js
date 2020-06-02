@@ -1,6 +1,6 @@
 import React from 'react';
-import {Button, TextInput,StyleSheet, View, Text} from 'react-native';
-
+import {Button, StyleSheet, View, Text} from 'react-native';
+import TextInput from '../../shared/TextInput';
 import { globalStyles } from '../../styles/global';
 
 import { Formik } from 'formik';
@@ -15,7 +15,7 @@ const HabitudeAlcoolSchema = yup.object({
 export default function AddHabitudeAlcool({ addHabitudeAlcool }){
 
     return(
-        <View style={globalStyles.container}>
+        <View style={styles.container}>
           <Formik
            initialValues={{ name: '',info:''}}
            validationSchema={HabitudeAlcoolSchema}
@@ -26,10 +26,10 @@ export default function AddHabitudeAlcool({ addHabitudeAlcool }){
           >
            {(props) => (
              <View>
-                 <TextInput style={globalStyles.input} placeholder='Nom du Habitude' onChangeText={props.handleChange('name')} value={props.values.name} onBlur={props.handleBlur('name')} />
+                 <TextInput  label='Nom du Habitude' onChangeText={props.handleChange('name')} value={props.values.name} onBlur={props.handleBlur('name')} />
                  <Text style={globalStyles.errorText}>{props.touched.name && props.errors.name}</Text>
 
-                 <TextInput style={globalStyles.input} placeholder='Information' onChangeText={props.handleChange('info')} value={props.values.info} onBlur={props.handleBlur('info')} />
+                 <TextInput label='Information' onChangeText={props.handleChange('info')} value={props.values.info} onBlur={props.handleBlur('info')} />
                  <Text style={globalStyles.errorText}>{props.touched.info && props.errors.info}</Text>
 
                 
@@ -42,3 +42,13 @@ export default function AddHabitudeAlcool({ addHabitudeAlcool }){
         </View>
     )
 }
+const styles = StyleSheet.create({
+   
+  container:{
+    flex: 1,
+    width: "100%",
+   maxWidth: 340,
+    alignSelf: "center",
+    justifyContent: "center", 
+   }, 
+  })

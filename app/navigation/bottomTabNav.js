@@ -15,7 +15,7 @@ const Tab = createBottomTabNavigator();
 export default function MyTabs() {
   return (
     <Tab.Navigator
-    initialRouteName="Feed"
+    initialRouteName="ProfilDrawer"
       tabBarOptions={{
         activeTintColor: '#6988cc',
       }}
