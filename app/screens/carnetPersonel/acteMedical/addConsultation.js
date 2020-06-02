@@ -10,6 +10,10 @@ import FlatButton from '../../../shared/button';
 
 const ConsultationSchema = yup.object({
     name: yup.string().required(),
+    specialite: yup.string().required(),
+    date: yup.string().required(),
+    remarque: yup.string().required(),
+    
 })
 
 export default function AddConsultation({ addConsultation }){

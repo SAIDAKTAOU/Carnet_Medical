@@ -40,7 +40,7 @@ function SignInScreen({navigation}) {
     if (emailError || passwordError) {
       setEmail({ ...email, error: emailError });
       setPassword({ ...password, error: passwordError });
-     // return;
+      return;
     }
 
     setLoading(true);
@@ -86,14 +86,14 @@ function SignInScreen({navigation}) {
         secureTextEntry
         autoCapitalize="none"
       />
-      {/** 
+    
       <View style={styles.forgotPassword}>
         <TouchableOpacity
         onPress={() => navigation.navigate()}>
           <Text style={styles.label}>Forgot your password?</Text>
         </TouchableOpacity>
       </View>
-      */}
+      
       <Button loading={loading} color={'#6988cc'} mode="contained" onPress={onLogin}>
         Login
       </Button>

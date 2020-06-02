@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import { StyleSheet, View ,Keyboard,TouchableWithoutFeedback, Text, FlatList,Modal, TouchableOpacity} from 'react-native';
 import { DataTable } from 'react-native-paper';
-import { MaterialIcons, MaterialCommunityIcons } from '@expo/vector-icons';
-
+import { MaterialIcons, MaterialCommunityIcons, Ionicons } from '@expo/vector-icons';
 import { globalStyles } from '../../../styles/global';
 import Card from '../../../shared/card';
 import AddConsultation from '././addConsultation';
@@ -61,6 +60,9 @@ export default function Consultation({ navigation }){
 
             </DataTable>
 
+            <TouchableOpacity onPress={() => navigation.goBack()}>
+            <Ionicons style={styles.iconBack} name="ios-arrow-back" size={28} color="black" />
+            </TouchableOpacity>
         </View>
     )
 }
@@ -112,6 +114,10 @@ const styles=StyleSheet.create({
         fontSize:16,
         marginLeft:10,
         marginTop:14,
+    }, 
+    iconBack:{
+        paddingTop:380,
+        paddingLeft:30
     }
   })
 

@@ -1,7 +1,6 @@
 import React, {useState} from 'react';
 import { View, Text, StyleSheet,Keyboard, FlatList, Modal,TouchableOpacity, TouchableWithoutFeedback} from 'react-native';
-
-import { Table, TableWrapper, Row, Rows, Col, Cols, Cell } from 'react-native-table-component';
+import { DataTable } from 'react-native-paper';
 
 import { MaterialIcons, FontAwesome } from '@expo/vector-icons';
 
@@ -46,22 +45,22 @@ export default function AntecedansFamiliaux({ navigation }){
 {/** 
 <MaterialIcons name='add' size={28} onPress={() => setModalOpen(true)} style={styles.modalToggle} />
 */}
+   <DataTable style={styles.datatable}>
+        <DataTable.Header>
+          <DataTable.Title>Parent</DataTable.Title>
+          <DataTable.Title >maladie</DataTable.Title>
+        </DataTable.Header>
 <FlatList
   numColumns={1}
   data={antFam}
   renderItem={({ item }) => (
-    <TouchableOpacity>
-    <View style={styles.container2}>
-    <FontAwesome style={styles.icon} name="edit" size={24} color="black" />
-    <View style={styles.container}>
-    <Text style={globalStyles.titleText}>Parent : {item.parent}</Text>
-    <Text style={globalStyles.titleText}>Maladie : {item.maladie} </Text>
-    </View>
-    </View>
-    </TouchableOpacity>
+    <DataTable.Row>
+    <DataTable.Cell>{item.parent}</DataTable.Cell>
+    <DataTable.Cell >{item.maladie}</DataTable.Cell>
+    </DataTable.Row>
     )}
 />
-
+</DataTable>
 </View>
     )
 }

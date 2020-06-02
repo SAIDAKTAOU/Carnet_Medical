@@ -1,6 +1,6 @@
 import React from 'react';
-import {Button, TextInput,StyleSheet, View, Text} from 'react-native';
-
+import {Button,StyleSheet, View, Text} from 'react-native';
+import TextInput from '../../shared/TextInput';
 import { globalStyles } from '../../styles/global';
 
 import { Formik } from 'formik';
@@ -16,7 +16,7 @@ const AntFamSchema = yup.object({
 export default function AddAntMedicaux({ addAntFam }){
 
     return(
-        <View style={globalStyles.container}>
+        <View style={styles.container}>
           <Formik
            initialValues={{ parent: '', maladie:'',}}
            validationSchema={AntFamSchema}
@@ -27,10 +27,10 @@ export default function AddAntMedicaux({ addAntFam }){
           >
            {(props) => (
              <View>
-                 <TextInput style={globalStyles.input} placeholder='Parent' onChangeText={props.handleChange('parent')} value={props.values.parent} onBlur={props.handleBlur('parent')} />
+                 <TextInput  returnKeyType="next" label='Parent' onChangeText={props.handleChange('parent')} value={props.values.parent} onBlur={props.handleBlur('parent')} />
                  <Text style={globalStyles.errorText}>{props.touched.parent && props.errors.parent}</Text>
                  
-                 <TextInput style={globalStyles.input} placeholder='Maladie' onChangeText={props.handleChange('maladie')} value={props.values.maladie} onBlur={props.handleBlur('maladie')} />
+                 <TextInput  returnKeyType="next" label='Maladie' onChangeText={props.handleChange('maladie')} value={props.values.maladie} onBlur={props.handleBlur('maladie')} />
                  <Text style={globalStyles.errorText}>{props.touched.maladie && props.errors.maladie}</Text>
 
                  <FlatButton text="Enregistrer" onPress={props.handleSubmit} />
@@ -41,3 +41,13 @@ export default function AddAntMedicaux({ addAntFam }){
         </View>
     )
 }
+const styles = StyleSheet.create({
+   
+  container:{
+    flex: 1,
+    width: "100%",
+   maxWidth: 340,
+    alignSelf: "center",
+    justifyContent: "center", 
+   }, 
+  })

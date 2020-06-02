@@ -1,6 +1,6 @@
 import React from 'react';
-import {Button, TextInput,StyleSheet, View, Text} from 'react-native';
-
+import {Button, StyleSheet, View, Text} from 'react-native';
+import TextInput from '../../shared/TextInput';
 import { globalStyles } from '../../styles/global';
 
 import { Formik } from 'formik';
@@ -15,7 +15,7 @@ const AntMedSchema = yup.object({
 export default function AddAntMedicaux({ addAntMed }){
 
     return(
-        <View style={globalStyles.container}>
+        <View style={styles.container}>
           <Formik
            initialValues={{ name: ''}}
            validationSchema={AntMedSchema}
@@ -26,7 +26,7 @@ export default function AddAntMedicaux({ addAntMed }){
           >
            {(props) => (
              <View>
-                 <TextInput style={globalStyles.input} placeholder='Nom' onChangeText={props.handleChange('name')} value={props.values.name} onBlur={props.handleBlur('name')} />
+                 <TextInput  label='Nom' onChangeText={props.handleChange('name')} value={props.values.name} onBlur={props.handleBlur('name')} />
                  <Text style={globalStyles.errorText}>{props.touched.name && props.errors.name}</Text>
                  
                  <FlatButton text="Enregistrer" onPress={props.handleSubmit} />
@@ -37,3 +37,14 @@ export default function AddAntMedicaux({ addAntMed }){
         </View>
     )
 }
+
+const styles = StyleSheet.create({
+   
+  container:{
+    flex: 1,
+    width: "100%",
+   maxWidth: 340,
+    alignSelf: "center",
+    justifyContent: "center", 
+   }, 
+  })
