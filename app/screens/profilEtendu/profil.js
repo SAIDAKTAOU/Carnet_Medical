@@ -13,7 +13,7 @@ export default function Profil({ navigation }){
          <Card style={styles.card}>
          <Card.Content>
          </Card.Content>
-         <Card.Cover styles={styles.image} source={require('../../images/image4.jpg')} />
+         <Card.Cover styles={styles.image} source={require('../../images/free-medicine-doctor-tools-vector.jpg')} />
         <FlatButton  text="Antecedans Medicaux" onPress={() => navigation.navigate('AntecedansMedicaux')} />
         </Card>
 
@@ -34,7 +34,7 @@ export default function Profil({ navigation }){
          <Card style={styles.card}>
          <Card.Content>
          </Card.Content>
-         <Card.Cover style={styles.image} source={require('../../images/ch.png')} />
+         <Card.Cover style={styles.image} source={require('../../images/chir.jpg')} />
        
          <FlatButton text="Chirurgie" onPress={() => navigation.navigate('Chirurgie')} />
         

@@ -13,7 +13,7 @@ export default function ActeMedical({ navigation }){
          <Card style={styles.card}>
          <Card.Content>
          </Card.Content>
-         <Card.Cover style={styles.image} source={require('../../images/consult.png')} />
+         <Card.Cover style={styles.image} source={require('../../images/icon_clinical_research.png')} />
         
          <FlatButton  text="Consultation" onPress={() => navigation.navigate('Consultation')} />
        
@@ -22,7 +22,7 @@ export default function ActeMedical({ navigation }){
          <Card style={styles.card}>
          <Card.Content>
          </Card.Content>
-         <Card.Cover style={styles.image} source={require('../../images/ordonnance.png')} />
+         <Card.Cover style={styles.image} source={require('../../images/icons-teal_study-design.png')} />
     
          <FlatButton  text="Ordonnance" onPress={() => navigation.navigate('Ordonnance')} />
          
