@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "projet-log",
+    "name": "Carnet_med_5",
     "slug": "projet-log",
     "platforms": [
       "ios",
@@ -23,6 +23,10 @@
     ],
     "ios": {
       "supportsTablet": true
+    },
+    "android": {
+      "package": "com.appspot.carnet_med_5",
+      "versionCode": 1
     }
   }
 }
