@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Text, StyleSheet,View, TouchableOpacity } from "react-native";
 import { emailValidator } from "../core/utils";
-import TextInput from "../shared/TextInput";
+import {TextInput} from 'react-native-paper';
 import { theme } from "../core/theme";
 import Button from "../shared/Button2";
 import { sendEmailWithPassword } from "../api/auth-app";
@@ -46,6 +46,9 @@ export default function ForgotPasswordScreen({navigation}) {
       <TextInput
         label="E-mail address"
         returnKeyType="done"
+        mode="outlined"
+        theme={{colors: {primary: '#6988cc', background: '#fff' }}}
+        style={{marginTop: 10}}
         value={email.value}
         onChangeText={text => setEmail({ value: text, error: "" })}
         error={!!email.error}
@@ -58,6 +61,7 @@ export default function ForgotPasswordScreen({navigation}) {
 
       <Button
         loading={loading}
+        color={'#6988cc'}
         mode="contained"
         onPress={_onSendPressed}
         style={styles.button}
@@ -88,7 +92,7 @@ const styles = StyleSheet.create({
     width: "100%",
     maxWidth: 340,
     alignSelf: "center",
-    alignItems: "center",
+   // alignItems: "center",
     justifyContent: "center"
    }, 
   back: {
