@@ -1,6 +1,6 @@
 import React from 'react';
 import {Button, StyleSheet, View, Text} from 'react-native';
-import TextInput from '../../../shared/TextInput';
+import {TextInput} from 'react-native-paper';
 import { globalStyles } from '../../../styles/global';
 
 import { Formik } from 'formik';
@@ -31,6 +31,7 @@ export default function AddConsultation({ addConsultation }){
            {(props) => (
              <View>
                 <TextInput
+                mode='outlined' style={{marginTop: 10}} theme={{colors: {primary: '#6988cc', background: '#fff' }}}
                label="Docteur"
                returnKeyType="next"
                onChangeText={props.handleChange('name')} value={props.values.name} onBlur={props.handleBlur('name')}
@@ -39,12 +40,14 @@ export default function AddConsultation({ addConsultation }){
 
                <TextInput
                label="Specialite"
+               mode='outlined' style={{marginTop: 10}} theme={{colors: {primary: '#6988cc', background: '#fff' }}}
                returnKeyType="next"
                onChangeText={props.handleChange('specialite')} value={props.values.specialite} onBlur={props.handleBlur('specilite')}/>
                <Text style={globalStyles.errorText}>{props.touched.specialite && props.errors.specialite}</Text>
 
                <TextInput
                label="Date"
+               mode='outlined' style={{marginTop: 10}} theme={{colors: {primary: '#6988cc', background: '#fff' }}}
                returnKeyType="next"
                onChangeText={props.handleChange('date')} value={props.values.date} onBlur={props.handleBlur('date')} />
                
@@ -52,6 +55,7 @@ export default function AddConsultation({ addConsultation }){
 
                <TextInput
                label="Remarque"
+               mode='outlined' style={{marginTop: 10}} theme={{colors: {primary: '#6988cc', background: '#fff' }}}
                returnKeyType="next"
                onChangeText={props.handleChange('remarque')} value={props.values.remarque} onBlur={props.handleBlur('remarque')} />
                
