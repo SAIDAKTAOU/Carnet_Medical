@@ -6,7 +6,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 import { useKeepAwake } from 'expo-keep-awake';
 
 import Button from './app/shared/Button2';
-import TextInput from './app/shared/TextInput';
+import {TextInput} from 'react-native-paper';
 import {theme} from './app/core/theme';
 import {
   emailValidator,
@@ -62,42 +62,43 @@ function SignInScreen({navigation}) {
   };
   return (
     
-    <View style={styles.container}>
-   
-   <TextInput
+   <View style={styles.container}>
+     <TextInput
         label="Email"
-        returnKeyType="next"
+        mode='outlined'
+        theme={{colors: {primary: '#6988cc', background: '#fff' }}}
+        style={{marginTop: 10}}
         value={email.value}
+        returnKeyType="next"
         onChangeText={text => setEmail({ value: text, error: "" })}
-        error={!!email.error}
-        errorText={email.error}
+        error={email.error}
         autoCapitalize="none"
         autoCompleteType="email"
         textContentType="emailAddress"
         keyboardType="email-address"
-      />
-      <TextInput
-        label="Password"
-        returnKeyType="done"
-        value={password.value}
-        onChangeText={text => setPassword({ value: text, error: "" })}
-        error={!!password.error}
-        errorText={password.error}
-        secureTextEntry
-        autoCapitalize="none"
-      />
-    
+        />
+     <TextInput
+          label="Password"
+          mode='outlined'
+          theme={{colors: {primary: '#6988cc', background: '#fff' }}}
+          style={{marginTop: 10}}
+          returnKeyType="done"
+          value={password.value}
+          onChangeText={text => setPassword({ value: text, error: "" })}
+          error={password.error}
+          secureTextEntry
+          autoCapitalize="none"
+        />
       <View style={styles.forgotPassword}>
         <TouchableOpacity
-        onPress={() => navigation.navigate()}>
+        onPress={() => navigation.navigate('ForgotPasswordScreen')}>
           <Text style={styles.label}>Forgot your password?</Text>
         </TouchableOpacity>
       </View>
-      
       <Button loading={loading} color={'#6988cc'} mode="contained" onPress={onLogin}>
         Login
       </Button>
-
+     
       <View style={styles.row}>
         <Text style={styles.label}>Don’t have an account? </Text>
         <TouchableOpacity onPress={() => navigation.navigate("signUp")}>
@@ -105,10 +106,9 @@ function SignInScreen({navigation}) {
         </TouchableOpacity>
       </View>
 
-
+   
       <Toast message={error} onDismiss={() => setError("")} />
-      
-      </View>
+   </View>
   );
 }
 
@@ -153,8 +153,11 @@ function SignUpScreen({navigation}) {
   return(
     <View style={styles.container}>
 
-    <TextInput
+      <TextInput
       label="Name"
+      mode='outlined'
+      theme={{colors: {primary: '#6988cc', background: '#fff' }}}
+      style={{marginTop: 10}}
       returnKeyType="next"
       value={name.value}
       onChangeText={text => setName({ value: text, error: "" })}
@@ -164,6 +167,9 @@ function SignUpScreen({navigation}) {
 
     <TextInput
       label="Email"
+      mode='outlined'
+      theme={{colors: {primary: '#6988cc', background: '#fff' }}}
+      style={{marginTop: 10}}
       returnKeyType="next"
       value={email.value}
       onChangeText={text => setEmail({ value: text, error: "" })}
@@ -177,6 +183,9 @@ function SignUpScreen({navigation}) {
 
     <TextInput
       label="Password"
+      mode="outlined"
+      theme={{colors: {primary: '#6988cc', background: '#fff' }}}
+      style={{marginTop: 10}}
       returnKeyType="done"
       value={password.value}
       onChangeText={text => setPassword({ value: text, error: "" })}
@@ -245,7 +254,7 @@ const styles = StyleSheet.create({
     width: "100%",
     maxWidth: 340,
     alignSelf: "center",
-    alignItems: "center",
+   // alignItems: "center",
     justifyContent: "center"
    }, 
    forgotPassword: {
