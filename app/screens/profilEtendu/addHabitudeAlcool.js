@@ -1,6 +1,6 @@
 import React from 'react';
 import {Button, StyleSheet, View, Text} from 'react-native';
-import TextInput from '../../shared/TextInput';
+import {TextInput} from 'react-native-paper';
 import { globalStyles } from '../../styles/global';
 
 import { Formik } from 'formik';
@@ -26,10 +26,10 @@ export default function AddHabitudeAlcool({ addHabitudeAlcool }){
           >
            {(props) => (
              <View>
-                 <TextInput  label='Nom du Habitude' onChangeText={props.handleChange('name')} value={props.values.name} onBlur={props.handleBlur('name')} />
+                 <TextInput  label='Nom du Habitude' mode='outlined' style={{marginTop: 10}} theme={{colors: {primary: '#6988cc', background: '#fff' }}} onChangeText={props.handleChange('name')} value={props.values.name} onBlur={props.handleBlur('name')} />
                  <Text style={globalStyles.errorText}>{props.touched.name && props.errors.name}</Text>
 
-                 <TextInput label='Information' onChangeText={props.handleChange('info')} value={props.values.info} onBlur={props.handleBlur('info')} />
+                 <TextInput label='Information' mode='outlined' style={{marginTop: 10}} theme={{colors: {primary: '#6988cc', background: '#fff' }}} onChangeText={props.handleChange('info')} value={props.values.info} onBlur={props.handleBlur('info')} />
                  <Text style={globalStyles.errorText}>{props.touched.info && props.errors.info}</Text>
 
                 
