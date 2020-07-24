@@ -5,8 +5,12 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { useKeepAwake } from 'expo-keep-awake';
 
+import * as Animatable from 'react-native-animatable';
+import { LinearGradient } from 'expo-linear-gradient';
+
+
 import Button from './app/shared/Button2';
-import {TextInput} from 'react-native-paper';
+import TextInput from './app/shared/TextInput';
 import {theme} from './app/core/theme';
 import {
   emailValidator,
@@ -21,6 +25,7 @@ import ProfilDrawer from './app/navigation/profilDrawer';
 import MyTabs from './app/navigation/bottomTabNav';
 import ForgotPasswordScreen from './app/screens/ForgotPasswordScreen';
 import AuthLoadingScreen from './app/screens/AuthLoadingScreen';
+import SplashScreen from './app/screens/SplashScreen';
 
 
 
@@ -61,23 +66,28 @@ function SignInScreen({navigation}) {
     setLoading(false);
   };
   return (
-    
-   <View style={styles.container}>
-     <TextInput
+     
+    <View style={styles.container}>
+    <View style={styles.header}>
+    <Text style={styles.text_header}>Bienvenue !</Text>
+    </View>
+    <Animatable.View animation="fadeInUpBig" style={styles.footer}>
+      <View style={styles.action}>
+    <TextInput
         label="Email"
         mode='outlined'
         theme={{colors: {primary: '#6988cc', background: '#fff' }}}
-        style={{marginTop: 10}}
         value={email.value}
         returnKeyType="next"
         onChangeText={text => setEmail({ value: text, error: "" })}
         error={email.error}
         autoCapitalize="none"
         autoCompleteType="email"
+        errorText={email.error}
         textContentType="emailAddress"
         keyboardType="email-address"
         />
-     <TextInput
+        <TextInput
           label="Password"
           mode='outlined'
           theme={{colors: {primary: '#6988cc', background: '#fff' }}}
@@ -86,29 +96,42 @@ function SignInScreen({navigation}) {
           value={password.value}
           onChangeText={text => setPassword({ value: text, error: "" })}
           error={password.error}
+          errorText={password.error}
           secureTextEntry
           autoCapitalize="none"
         />
-      <View style={styles.forgotPassword}>
+        <View style={styles.forgotPassword}>
         <TouchableOpacity
         onPress={() => navigation.navigate('ForgotPasswordScreen')}>
-          <Text style={styles.label}>Forgot your password?</Text>
+          <Text style={styles.label}>mot de passe oublié?</Text>
         </TouchableOpacity>
       </View>
-      <Button loading={loading} color={'#6988cc'} mode="contained" onPress={onLogin}>
-        Login
-      </Button>
-     
-      <View style={styles.row}>
-        <Text style={styles.label}>Don’t have an account? </Text>
-        <TouchableOpacity onPress={() => navigation.navigate("signUp")}>
-          <Text style={styles.link}>Sign up</Text>
-        </TouchableOpacity>
-      </View>
+        
+        <TouchableOpacity onPress={onLogin}>
+        <View style={styles.button}>
+        <LinearGradient
+          // Button Linear Gradient
+          colors={['#648adf', '#6988cc']}
+          style={styles.signIn}>
+              <Text style={styles.textSignIn}>Se connecter</Text>
+          </LinearGradient>
+          </View>
+          </TouchableOpacity >
+          
+          <TouchableOpacity onPress={() => navigation.navigate("signUp")} style={{width:'100%',height:50,justifyContent:'center',alignItems:'center',borderRadius:10,marginTop:15 ,borderColor:'#6988cc', borderWidth:1,}}>
+          <View style={styles.button}>
+          <Text style={{fontWeight:'bold',fontSize:18,color:"#6988cc", marginBottom:30}}>S'inscrire</Text>
+          </View>
+          </TouchableOpacity>
+       
+
 
    
       <Toast message={error} onDismiss={() => setError("")} />
-   </View>
+        </View>
+    </Animatable.View>
+
+    </View>
   );
 }
 
@@ -152,9 +175,13 @@ function SignUpScreen({navigation}) {
   };
   return(
     <View style={styles.container}>
-
+    <View style={styles.header}>
+    <Text style={styles.text_header}>Bienvenue !</Text>
+    </View>
+    <Animatable.View animation="fadeInUpBig" style={styles.footer}>
+      <View style={styles.action}>
       <TextInput
-      label="Name"
+      label="Nom d'utilisateur"
       mode='outlined'
       theme={{colors: {primary: '#6988cc', background: '#fff' }}}
       style={{marginTop: 10}}
@@ -182,8 +209,8 @@ function SignUpScreen({navigation}) {
     />
 
     <TextInput
-      label="Password"
-      mode="outlined"
+      label="Mot de passe"
+      mode='outlined'
       theme={{colors: {primary: '#6988cc', background: '#fff' }}}
       style={{marginTop: 10}}
       returnKeyType="done"
@@ -195,24 +222,28 @@ function SignUpScreen({navigation}) {
       autoCapitalize="none"
     />
 
-    <Button
-      loading={loading}
-      mode="contained"
-      color={'#6988cc'}
-      onPress={onSignUp}
-      style={styles.button}
-    >
-      Sign Up
-    </Button>
+        <TouchableOpacity onPress={onSignUp}>
+        <View style={styles.button}>
+        <LinearGradient
+          // Button Linear Gradient
+          colors={['#648adf', '#6988cc']}
+          style={styles.signIn}>
+              <Text style={styles.textSignIn}>S'inscrire</Text>
+          </LinearGradient>
+          </View>
+          </TouchableOpacity >
+          
+          <TouchableOpacity onPress={() => navigation.navigate("login")} style={{width:'100%',height:50,justifyContent:'center',alignItems:'center',borderRadius:10,marginTop:15 ,borderColor:'#6988cc', borderWidth:1,}}>
+          <View style={styles.button}>
+          <Text style={{fontWeight:'bold',fontSize:18,color:"#6988cc", marginBottom:30}}>Se connecter</Text>
+          </View>
+          </TouchableOpacity>
+       
 
-    <View style={styles.row}>
-      <Text style={styles.label}>Already have an account? </Text>
-      <TouchableOpacity onPress={() => navigation.navigate("login")}>
-        <Text style={styles.link}>Login</Text>
-      </TouchableOpacity>
-    </View>
+          <Toast message={error} onDismiss={() => setError("")} />
+        </View>
+    </Animatable.View>
 
-    <Toast message={error} onDismiss={() => setError("")} />
   </View>
   )
 
@@ -237,6 +268,9 @@ export default function App({ navigation }) {
       <Stack.Screen name="signUp"  component={SignUpScreen} options={
           {title: 'Sign Up'},
           {headerLeft: null} }  />
+          <Stack.Screen name="SplashScreen"  component={SplashScreen} options={
+          {title: 'Splash'},
+          {headerLeft: null} }  />
       <Stack.Screen  name="bottomTab" component={MyTabs} />
       <Stack.Screen name="authLoadingScreen" component ={AuthLoadingScreen} />
       <Stack.Screen name="ForgotPasswordScreen" component ={ForgotPasswordScreen} />
@@ -248,15 +282,6 @@ export default function App({ navigation }) {
 
 const styles = StyleSheet.create({
    
-  container:{
-    flex: 1,
-    padding: 20,
-    width: "100%",
-    maxWidth: 340,
-    alignSelf: "center",
-   // alignItems: "center",
-    justifyContent: "center"
-   }, 
    forgotPassword: {
     width: "100%",
     alignItems: "flex-end",
@@ -267,10 +292,55 @@ const styles = StyleSheet.create({
     marginTop: 4
   },
   label: {
-    color: theme.colors.secondary
+    color: '#6988cc',
+    fontWeight:'bold'
   },
   link: {
     fontWeight: "bold",
     color: theme.colors.primary
-  }
+  },
+  header:{
+    flex:1,
+    justifyContent:'flex-end',
+    paddingHorizontal:20,
+    paddingBottom:50,
+  },
+  footer:{
+    flex:3,
+    backgroundColor:'white',
+    borderTopLeftRadius:30,
+    borderTopRightRadius:30,
+    paddingHorizontal:20,
+    paddingVertical:30,
+  }, 
+  container:{
+    flex:1,
+    backgroundColor:'#6988cc'
+  },
+  text_header:{
+    color:'white',
+    fontWeight:'bold',
+    fontSize:30
+  },
+  action:{
+  marginTop:35,
+  },
+  signIn:{
+    width:'100%',
+    height:50,
+    justifyContent:'center',
+    alignItems:'center',
+    borderRadius:10,
+   },
+   textSignIn:{
+       color:'white',
+       fontWeight:'bold',
+       fontSize:18
+   },
+   button:{
+     alignItems:'center',
+     marginTop:30
+   }
+  
 });
+
