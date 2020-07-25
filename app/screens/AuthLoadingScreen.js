@@ -14,7 +14,7 @@ export default function AuthLoadingScreen  ({ navigation })  {
     if (user) {
       navigation.navigate("bottomTab");
     } else {
-      navigation.navigate("login");
+      navigation.navigate("SplashScreen");
     }
   });
 
