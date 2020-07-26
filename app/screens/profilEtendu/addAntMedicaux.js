@@ -26,7 +26,7 @@ export default function AddAntMedicaux({ addAntMed }){
           >
            {(props) => (
              <View>
-                 <TextInput mode='outlined' style={{marginTop: 10}} theme={{colors: {primary: '#6988cc', background: '#fff' }}}  label='Nom' onChangeText={props.handleChange('name')} value={props.values.name} onBlur={props.handleBlur('name')} />
+                 <TextInput mode='outlined' style={{marginTop: 10}} theme={{colors: {primary: '#9159b8', background: '#fff' }}}  label='Nom' onChangeText={props.handleChange('name')} value={props.values.name} onBlur={props.handleBlur('name')} />
                  <Text style={globalStyles.errorText}>{props.touched.name && props.errors.name}</Text>
                  
                  <FlatButton text="Enregistrer" onPress={props.handleSubmit} />
