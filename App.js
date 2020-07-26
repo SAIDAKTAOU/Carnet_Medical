@@ -76,7 +76,7 @@ function SignInScreen({navigation}) {
     <TextInput
         label="Email"
         mode='outlined'
-        theme={{colors: {primary: '#ff6666', background: '#fff' }}}
+        theme={{colors: {primary: '#9159b8', background: '#fff' }}}
         value={email.value}
         returnKeyType="next"
         onChangeText={text => setEmail({ value: text, error: "" })}
@@ -90,7 +90,7 @@ function SignInScreen({navigation}) {
         <TextInput
           label="Password"
           mode='outlined'
-          theme={{colors: {primary: '#ff6666', background: '#fff' }}}
+          theme={{colors: {primary: '#9159b8', background: '#fff' }}}
           style={{marginTop: 10}}
           returnKeyType="done"
           value={password.value}
@@ -111,16 +111,16 @@ function SignInScreen({navigation}) {
         <View style={styles.button}>
         <LinearGradient
           // Button Linear Gradient
-          colors={['#ff6666', '#ff6666']}
+          colors={['#9159b8', '#705385']}
           style={styles.signIn}>
               <Text style={styles.textSignIn}>Se connecter</Text>
           </LinearGradient>
           </View>
           </TouchableOpacity >
           
-          <TouchableOpacity onPress={() => navigation.navigate("signUp")} style={{width:'100%',height:50,justifyContent:'center',alignItems:'center',borderRadius:10,marginTop:15 ,borderColor:'#6988cc', borderWidth:1,}}>
+          <TouchableOpacity onPress={() => navigation.navigate("signUp")} style={{width:'100%',height:50,justifyContent:'center',alignItems:'center',borderRadius:10,marginTop:15 ,borderColor:'#9159b8', borderWidth:1,}}>
           <View style={styles.button}>
-          <Text style={{fontWeight:'bold',fontSize:18,color:"#ff6666", marginBottom:30}}>S'inscrire</Text>
+          <Text style={{fontWeight:'bold',fontSize:18,color:"#9159b8", marginBottom:30}}>S'inscrire</Text>
           </View>
           </TouchableOpacity>
 
@@ -184,7 +184,7 @@ function SignUpScreen({navigation}) {
       <TextInput
       label="Nom d'utilisateur"
       mode='outlined'
-      theme={{colors: {primary: '#ff6666', background: '#fff' }}}
+      theme={{colors: {primary: '#9159b8', background: '#fff' }}}
       style={{marginTop: 10}}
       returnKeyType="next"
       value={name.value}
@@ -196,7 +196,7 @@ function SignUpScreen({navigation}) {
     <TextInput
       label="Email"
       mode='outlined'
-      theme={{colors: {primary: '#ff6666', background: '#fff' }}}
+      theme={{colors: {primary: '#9159b8', background: '#fff' }}}
       style={{marginTop: 10}}
       returnKeyType="next"
       value={email.value}
@@ -212,7 +212,7 @@ function SignUpScreen({navigation}) {
     <TextInput
       label="Mot de passe"
       mode='outlined'
-      theme={{colors: {primary: '#ff6666', background: '#fff' }}}
+      theme={{colors: {primary: '#9159b8', background: '#fff' }}}
       style={{marginTop: 10}}
       returnKeyType="done"
       value={password.value}
@@ -227,16 +227,16 @@ function SignUpScreen({navigation}) {
         <View style={styles.button}>
         <LinearGradient
           // Button Linear Gradient
-          colors={['#ff6666', '#ff6666']}
+          colors={['#9159b8', '#705385']}
           style={styles.signIn}>
               <Text style={styles.textSignIn}>S'inscrire</Text>
           </LinearGradient>
           </View>
           </TouchableOpacity >
           
-          <TouchableOpacity onPress={() => navigation.navigate("login")} style={{width:'100%',height:50,justifyContent:'center',alignItems:'center',borderRadius:10,marginTop:15 ,borderColor:'#6988cc', borderWidth:1,}}>
+          <TouchableOpacity onPress={() => navigation.navigate("login")} style={{width:'100%',height:50,justifyContent:'center',alignItems:'center',borderRadius:10,marginTop:15 ,borderColor:'#9159b8', borderWidth:1,}}>
           <View style={styles.button}>
-          <Text style={{fontWeight:'bold',fontSize:18,color:"#ff6666", marginBottom:30}}>Se connecter</Text>
+          <Text style={{fontWeight:'bold',fontSize:18,color:"#9159b8", marginBottom:30}}>Se connecter</Text>
           </View>
           </TouchableOpacity>
        
@@ -293,7 +293,7 @@ const styles = StyleSheet.create({
     marginTop: 4
   },
   label: {
-    color: '#ff6666',
+    color: '#9159b8',
     fontWeight:'bold'
   },
   link: {
@@ -316,7 +316,7 @@ const styles = StyleSheet.create({
   }, 
   container:{
     flex:1,
-    backgroundColor:'#ff6666'
+    backgroundColor:'#9159b8'
   },
   text_header:{
     color:'black',
