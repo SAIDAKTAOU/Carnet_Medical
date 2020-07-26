@@ -29,21 +29,21 @@ export default function AddBilanAnalyse({ addBilanAnalyse }){
           >
            {(props) => (
              <View>
-                 <TextInput returnKeyType="next" label='Docteur' mode='outlined' style={{marginTop: 10}} theme={{colors: {primary: '#6988cc', background: '#fff' }}} onChangeText={props.handleChange('name')} value={props.values.name} onBlur={props.handleBlur('name')} />
+                 <TextInput returnKeyType="next" label='Docteur' mode='outlined' style={{marginTop: 10}} theme={{colors: {primary: '#9159b8', background: '#fff' }}} onChangeText={props.handleChange('name')} value={props.values.name} onBlur={props.handleBlur('name')} />
                  <Text style={globalStyles.errorText}>{props.touched.name && props.errors.name}</Text>
 
                  
 
-                 <TextInput returnKeyType="next" label='Specialite' mode='outlined' style={{marginTop: 10}} theme={{colors: {primary: '#6988cc', background: '#fff' }}} onChangeText={props.handleChange('specialite')} value={props.values.specialite} onBlur={props.handleBlur('specilite')} />
+                 <TextInput returnKeyType="next" label='Specialite' mode='outlined' style={{marginTop: 10}} theme={{colors: {primary: '#9159b8', background: '#fff' }}} onChangeText={props.handleChange('specialite')} value={props.values.specialite} onBlur={props.handleBlur('specilite')} />
                  <Text style={globalStyles.errorText}>{props.touched.specialite && props.errors.specialite}</Text>
 
-                 <TextInput returnKeyType="next" label='Date' mode='outlined' style={{marginTop: 10}} theme={{colors: {primary: '#6988cc', background: '#fff' }}} onChangeText={props.handleChange('date')} value={props.values.date} onBlur={props.handleBlur('date')} />
+                 <TextInput returnKeyType="next" label='Date' mode='outlined' style={{marginTop: 10}} theme={{colors: {primary: '#9159b8', background: '#fff' }}} onChangeText={props.handleChange('date')} value={props.values.date} onBlur={props.handleBlur('date')} />
                  <Text style={globalStyles.errorText}>{props.touched.date && props.errors.date}</Text>
 
-                 <TextInput returnKeyType="next" label='Prix' mode='outlined' style={{marginTop: 10}} theme={{colors: {primary: '#6988cc', background: '#fff' }}} onChangeText={props.handleChange('prix')} value={props.values.prix} onBlur={props.handleBlur('prix')} />
+                 <TextInput returnKeyType="next" label='Prix' mode='outlined' style={{marginTop: 10}} theme={{colors: {primary: '#9159b8', background: '#fff' }}} onChangeText={props.handleChange('prix')} value={props.values.prix} onBlur={props.handleBlur('prix')} />
                  <Text style={globalStyles.errorText}>{props.touched.prix && props.errors.prix}</Text>
 
-                 <TextInput returnKeyType="next" label='Bilan Analyse' mode='outlined' style={{marginTop: 10}} theme={{colors: {primary: '#6988cc', background: '#fff' }}} onChangeText={props.handleChange('image')} value={props.values.image} onBlur={props.handleBlur('image')} />
+                 <TextInput returnKeyType="next" label='Bilan Analyse' mode='outlined' style={{marginTop: 10}} theme={{colors: {primary: '#9159b8', background: '#fff' }}} onChangeText={props.handleChange('image')} value={props.values.image} onBlur={props.handleBlur('image')} />
                  <Text style={globalStyles.errorText}>{props.touched.image && props.errors.image}</Text>
 
                  
