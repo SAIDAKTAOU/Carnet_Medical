@@ -27,10 +27,10 @@ export default function AddAntMedicaux({ addAntFam }){
           >
            {(props) => (
              <View>
-                 <TextInput  returnKeyType="next" mode='outlined' style={{marginTop: 10}} theme={{colors: {primary: '#6988cc', background: '#fff' }}} label='Parent' onChangeText={props.handleChange('parent')} value={props.values.parent} onBlur={props.handleBlur('parent')} />
+                 <TextInput  returnKeyType="next" mode='outlined' style={{marginTop: 10}} theme={{colors: {primary: '#9159b8', background: '#fff' }}} label='Parent' onChangeText={props.handleChange('parent')} value={props.values.parent} onBlur={props.handleBlur('parent')} />
                  <Text style={globalStyles.errorText}>{props.touched.parent && props.errors.parent}</Text>
                  
-                 <TextInput mode='outlined' style={{marginTop: 10}} theme={{colors: {primary: '#6988cc', background: '#fff' }}}  returnKeyType="next" label='Maladie' onChangeText={props.handleChange('maladie')} value={props.values.maladie} onBlur={props.handleBlur('maladie')} />
+                 <TextInput mode='outlined' style={{marginTop: 10}} theme={{colors: {primary: '#9159b8', background: '#fff' }}}  returnKeyType="next" label='Maladie' onChangeText={props.handleChange('maladie')} value={props.values.maladie} onBlur={props.handleBlur('maladie')} />
                  <Text style={globalStyles.errorText}>{props.touched.maladie && props.errors.maladie}</Text>
 
                  <FlatButton text="Enregistrer" onPress={props.handleSubmit} />
