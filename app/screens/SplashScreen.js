@@ -90,7 +90,7 @@ const styles = StyleSheet.create({
      flexDirection:'row'
     },
     textSignIn:{
-        color:'black',
+        color:'white',
         fontWeight:'bold'
     }
 })
