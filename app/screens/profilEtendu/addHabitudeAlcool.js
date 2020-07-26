@@ -26,10 +26,10 @@ export default function AddHabitudeAlcool({ addHabitudeAlcool }){
           >
            {(props) => (
              <View>
-                 <TextInput  label='Nom du Habitude' mode='outlined' style={{marginTop: 10}} theme={{colors: {primary: '#6988cc', background: '#fff' }}} onChangeText={props.handleChange('name')} value={props.values.name} onBlur={props.handleBlur('name')} />
+                 <TextInput  label='Nom du Habitude' mode='outlined' style={{marginTop: 10}} theme={{colors: {primary: '#9159b8', background: '#fff' }}} onChangeText={props.handleChange('name')} value={props.values.name} onBlur={props.handleBlur('name')} />
                  <Text style={globalStyles.errorText}>{props.touched.name && props.errors.name}</Text>
 
-                 <TextInput label='Information' mode='outlined' style={{marginTop: 10}} theme={{colors: {primary: '#6988cc', background: '#fff' }}} onChangeText={props.handleChange('info')} value={props.values.info} onBlur={props.handleBlur('info')} />
+                 <TextInput label='Information' mode='outlined' style={{marginTop: 10}} theme={{colors: {primary: '#9159b8', background: '#fff' }}} onChangeText={props.handleChange('info')} value={props.values.info} onBlur={props.handleBlur('info')} />
                  <Text style={globalStyles.errorText}>{props.touched.info && props.errors.info}</Text>
 
                 
