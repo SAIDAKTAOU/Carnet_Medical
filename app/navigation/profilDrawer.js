@@ -8,8 +8,8 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { Block } from "galio-framework";
 
 // screens
-import Onboarding from "../screens/Onboarding";
-import SplashScreen from "../screens/SplashScreen";
+
+import SplashScreen from "../screens/SplashScreen"; 
 
 import CarnetPersonel from '../screens/carnetPersonel/carnetPersonel';
 import BdMedicament from '../screens/carnetPersonel/BdMedicament';
@@ -142,23 +142,9 @@ function CarnetPersonelStack(props) {
     </Stack.Navigator>
   );
 }
+ 
 
-export default function OnboardingStack(props) {
-  return (
-    <Stack.Navigator mode="card" headerMode="none">
-      <Stack.Screen
-        name="Onboarding"
-        component={Onboarding}
-        option={{
-          headerTransparent: true
-        }}
-      />
-      <Stack.Screen name="App" component={ProfilDrawer} />
-    </Stack.Navigator>
-  );
-}
-
-function ProfilDrawer(props) {
+export default function ProfilDrawer(props) {
   return (
     <Drawer.Navigator
       style={{ flex: 1 }}
