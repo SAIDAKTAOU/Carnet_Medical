@@ -47,7 +47,7 @@ export default function ForgotPasswordScreen({navigation}) {
         label="E-mail address"
         returnKeyType="done"
         mode="outlined"
-        theme={{colors: {primary: '#6988cc', background: '#fff' }}}
+        theme={{colors: {primary: '#9159b8', background: '#fff' }}}
         style={{marginTop: 10}}
         value={email.value}
         onChangeText={text => setEmail({ value: text, error: "" })}
@@ -61,7 +61,7 @@ export default function ForgotPasswordScreen({navigation}) {
 
       <Button
         loading={loading}
-        color={'#6988cc'}
+        color={'#9159b8'}
         mode="contained"
         onPress={_onSendPressed}
         style={styles.button}
