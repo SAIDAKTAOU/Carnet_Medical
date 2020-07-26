@@ -26,16 +26,16 @@ export default function AddChirurgie({ addChirurgie }){
           >
            {(props) => (
              <View>
-                 <TextInput label='Nom du chirurgie' mode='outlined' style={{marginTop: 10}} theme={{colors: {primary: '#6988cc', background: '#fff' }}} onChangeText={props.handleChange('name')} value={props.values.name} onBlur={props.handleBlur('name')} />
+                 <TextInput label='Nom du chirurgie' mode='outlined' style={{marginTop: 10}} theme={{colors: {primary: '#9159b8', background: '#fff' }}} onChangeText={props.handleChange('name')} value={props.values.name} onBlur={props.handleBlur('name')} />
                  <Text style={globalStyles.errorText}>{props.touched.name && props.errors.name}</Text>
 
-                 <TextInput label='Docteur' mode='outlined' style={{marginTop: 10}} theme={{colors: {primary: '#6988cc', background: '#fff' }}} onChangeText={props.handleChange('docteur')} value={props.values.docteur} onBlur={props.handleBlur('docteur')} />
+                 <TextInput label='Docteur' mode='outlined' style={{marginTop: 10}} theme={{colors: {primary: '#9159b8', background: '#fff' }}} onChangeText={props.handleChange('docteur')} value={props.values.docteur} onBlur={props.handleBlur('docteur')} />
                  <Text style={globalStyles.errorText}>{props.touched.docteur && props.errors.docteur}</Text>
 
-                 <TextInput label='Date' mode='outlined' style={{marginTop: 10}} theme={{colors: {primary: '#6988cc', background: '#fff' }}} onChangeText={props.handleChange('date')} value={props.values.date} onBlur={props.handleBlur('date')} />
+                 <TextInput label='Date' mode='outlined' style={{marginTop: 10}} theme={{colors: {primary: '#9159b8', background: '#fff' }}} onChangeText={props.handleChange('date')} value={props.values.date} onBlur={props.handleBlur('date')} />
                  <Text style={globalStyles.errorText}>{props.touched.date && props.errors.date}</Text>
 
-                 <TextInput label='Bien' mode='outlined' style={{marginTop: 10}} theme={{colors: {primary: '#6988cc', background: '#fff' }}} onChangeText={props.handleChange('bien')} value={props.values.bien} onBlur={props.handleBlur('bien')} />
+                 <TextInput label='Bien' mode='outlined' style={{marginTop: 10}} theme={{colors: {primary: '#9159b8', background: '#fff' }}} onChangeText={props.handleChange('bien')} value={props.values.bien} onBlur={props.handleBlur('bien')} />
                  <Text style={globalStyles.errorText}>{props.touched.bien && props.errors.bien}</Text>
                  
                  <FlatButton text="Enregistrer" onPress={props.handleSubmit} />
