@@ -25,7 +25,7 @@ export default function SplashComponent({ navigation }){
         <TouchableOpacity onPress={()=> navigation.navigate('login')}>
         <LinearGradient
           // Button Linear Gradient
-          colors={['#ff6666', '#ff6666']}
+          colors={['#9159b8', '#705385']}
           style={styles.signIn}>
               <Text style={styles.textSignIn}>Se connecter</Text>
               <MaterialIcons name="navigate-next" size={20} color="black" />
@@ -44,7 +44,7 @@ const height_logo = height * 0.7 * 0.4;
 const styles = StyleSheet.create({
    container:{
        flex:1,
-       backgroundColor:'#ff8080'
+       backgroundColor:'#9159b8'
    },
    header:{
     flex:2,
@@ -67,7 +67,7 @@ const styles = StyleSheet.create({
     height:380
    },
    title:{
-       color:'#ff6666',
+       color:'#9159b8',
        fontWeight:'bold',
        fontSize:30
     },
