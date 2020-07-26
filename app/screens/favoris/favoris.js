@@ -13,7 +13,7 @@ export default function Favoris({ navigation }){
         <Card style={styles.card}>
         <Card.Content>
         </Card.Content>
-        <Card.Cover styles={styles.image} source={require('../../images/medecinn.jpg')} />
+        <Card.Cover styles={styles.image} source={require('../../images/medecin.jpg')} />
        <FlatButton  text="Medecins" onPress={() =>  navigation.navigate('Medecins')} />
         </Card>
 
@@ -41,7 +41,7 @@ export default function Favoris({ navigation }){
         <Card style={styles.card}>
         <Card.Content>
         </Card.Content>
-        <Card.Cover style={styles.image} source={require('../../images/ambulance.png')} />
+        <Card.Cover style={styles.image} source={require('../../images/ambulance.jpg')} />
        <FlatButton text="Ambulances" onPress={() => navigation.navigate('Ambulances')} />
       
         </Card>

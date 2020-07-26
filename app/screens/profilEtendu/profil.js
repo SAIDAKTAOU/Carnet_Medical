@@ -20,7 +20,7 @@ export default function Profil({ navigation }){
          <Card style={styles.card}>
          <Card.Content>
          </Card.Content>
-         <Card.Cover style={styles.image} source={require('../../images/ann.jpg')} />
+         <Card.Cover style={styles.image} source={require('../../images/ann.png')} />
         <FlatButton  text="Antecedans Familiaux" onPress={() => navigation.navigate('AntecedansFamiliaux')} />
         </Card>
 

@@ -17,8 +17,8 @@ export default function MyTabs() {
     <Tab.Navigator
     initialRouteName="ProfilDrawer"
       tabBarOptions={{
-        activeTintColor: '#6988cc',
-      }}
+        activeTintColor: '#ff6666',
+      }} 
     >
       <Tab.Screen
         name="ProfilDrawer"

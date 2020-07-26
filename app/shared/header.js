@@ -11,7 +11,7 @@ export default function Header ({ navigation, title }){
     return (
         <View style={styles.header}>
             {/**icon for the menu */}
-            <MaterialIcons name='menu' size={28} onPress={openMenu} style={styles.icon} />
+            <MaterialIcons name='menu' size={28} onPress={openMenu} style={styles.icon} color="#ff6666" />
             <View style={styles.headerTitle}>
              <Text style={styles.headerText}>{ title} </Text>
             </View>
@@ -32,7 +32,7 @@ const styles = StyleSheet.create({
     headerText:{
      fontWeight:'bold',
      fontSize:20,
-     color:'#333',
+     color:'#ff6666',
      letterSpacing:1,
     },
     icon:{

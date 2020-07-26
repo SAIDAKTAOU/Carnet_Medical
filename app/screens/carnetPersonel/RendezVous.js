@@ -39,7 +39,7 @@ export default function RendezVous({ navigation }){
         </TouchableWithoutFeedback>
         </Modal>
 
-        <MaterialIcons name="add-box" size={28} color="black"  onPress={() => setModalOpen(true)} style={styles.modalToggle} />
+        <MaterialIcons name="add-box" size={28} color="#ff6666"  onPress={() => setModalOpen(true)} style={styles.modalToggle} />
 
         <DataTable style={styles.datatable}>
         <DataTable.Header>

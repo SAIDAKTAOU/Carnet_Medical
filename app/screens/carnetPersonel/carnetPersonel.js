@@ -21,7 +21,7 @@ export default function CarnetPersonnel({ navigation }){
         <Card style={styles.card}>
         <Card.Content>
         </Card.Content>
-        <Card.Cover style={styles.image} source={require('../../images/acte.png')} />
+        <Card.Cover style={styles.image} source={require('../../images/acte.jpg')} />
        
         <FlatButton  text="Acte Medical" onPress={() => navigation.navigate('Acte Medical')} />
         
@@ -30,7 +30,7 @@ export default function CarnetPersonnel({ navigation }){
         <Card style={styles.card}>
         <Card.Content>
         </Card.Content>
-        <Card.Cover style={styles.image} source={require('../../images/icon-cro-32.png')} />
+        <Card.Cover style={styles.image} source={require('../../images/icon-cro-32.jpg')} />
        
         <FlatButton  text="Bd Medicament" onPress={() => navigation.navigate('Bd Medicament')} />
      

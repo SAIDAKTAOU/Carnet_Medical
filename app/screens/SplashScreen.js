@@ -13,7 +13,7 @@ export default function SplashComponent({ navigation }){
         <Animatable.Image
         animation="bounceIn"
         duration={1500}
-        source={require('../../assets/icon1.png')}
+        source={require('../../assets/logo.png')}
         style={styles.logo}
         resizeMode={"stretch"}
         />
@@ -25,10 +25,10 @@ export default function SplashComponent({ navigation }){
         <TouchableOpacity onPress={()=> navigation.navigate('login')}>
         <LinearGradient
           // Button Linear Gradient
-          colors={['#648adf', '#6988cc']}
+          colors={['#ff6666', '#ff6666']}
           style={styles.signIn}>
               <Text style={styles.textSignIn}>Se connecter</Text>
-              <MaterialIcons name="navigate-next" size={20} color="white" />
+              <MaterialIcons name="navigate-next" size={20} color="black" />
           </LinearGradient>
         </TouchableOpacity>
         
@@ -44,7 +44,7 @@ const height_logo = height * 0.7 * 0.4;
 const styles = StyleSheet.create({
    container:{
        flex:1,
-       backgroundColor:'#6988cc'
+       backgroundColor:'#ff8080'
    },
    header:{
     flex:2,
@@ -62,10 +62,12 @@ const styles = StyleSheet.create({
    logo:{
     width:height_logo,
     height:height_logo,
-    borderRadius:500
+    borderRadius:600,
+    width:380,
+    height:380
    },
    title:{
-       color:'#6988cc',
+       color:'#ff6666',
        fontWeight:'bold',
        fontSize:30
     },
@@ -75,6 +77,7 @@ const styles = StyleSheet.create({
 
     }, 
     button:{
+        
         alignItems:"flex-end",
         marginTop:30
     },
@@ -87,7 +90,7 @@ const styles = StyleSheet.create({
      flexDirection:'row'
     },
     textSignIn:{
-        color:'white',
+        color:'black',
         fontWeight:'bold'
     }
 })

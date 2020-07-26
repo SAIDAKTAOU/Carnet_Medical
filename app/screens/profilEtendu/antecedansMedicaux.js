@@ -45,7 +45,7 @@ export default function AntecedansMedicaux({ navigation }){
             </TouchableWithoutFeedback>
             </Modal>
 
-            <MaterialIcons name="add-box" size={28} color="black"  onPress={() => setModalOpen(true)} style={styles.modalToggle} />
+            <MaterialIcons name="add-box" size={28} color="#ff6666"  onPress={() => setModalOpen(true)} style={styles.modalToggle} />
             {/** 
             <MaterialIcons name='add' size={28} onPress={() => setModalOpen(true)} style={styles.modalToggle} />
            */}

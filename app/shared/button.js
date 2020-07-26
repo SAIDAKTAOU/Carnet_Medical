@@ -20,11 +20,11 @@ const styles = StyleSheet.create({
        paddingVertical:14,
        borderRadius:10,
        paddingHorizontal:10,
-       backgroundColor:'#6988cc',
+       backgroundColor:'#ff6666',
        marginTop:6,
    } ,
    buttonText:{
-    color:'white',
+    color:'black',
     textTransform:'uppercase',
     fontSize:14,
     textAlign:'center',
