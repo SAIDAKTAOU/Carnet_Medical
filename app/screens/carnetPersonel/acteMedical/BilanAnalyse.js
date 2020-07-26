@@ -38,7 +38,7 @@ export default function BilanAnalyse({ navigation }){
             </TouchableWithoutFeedback>
             </Modal>
             
-            <MaterialIcons name="add-box" size={28} color="#ff6666"  onPress={() => setModalOpen(true)} style={styles.modalToggle} />
+            <MaterialIcons name="add-box" size={28} color="#9159b8"  onPress={() => setModalOpen(true)} style={styles.modalToggle} />
 {/*     <MaterialIcons name='add' size={28} onPress={() => setModalOpen(true)} style={styles.modalToggle} />
       */}     
                <DataTable style={styles.datatable}>
@@ -59,7 +59,7 @@ export default function BilanAnalyse({ navigation }){
             />
             </DataTable>
 <TouchableOpacity onPress={() => navigation.goBack()}>
-            <Ionicons style={styles.iconBack} name="ios-arrow-back" size={28} color="#ff6666" />
+            <Ionicons style={styles.iconBack} name="ios-arrow-back" size={28} color="#9159b8" />
             </TouchableOpacity>
         </View>
     )
