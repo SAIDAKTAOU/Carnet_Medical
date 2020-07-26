@@ -31,7 +31,7 @@ export default function AddRendezVous({ addRendezVous }){
              <View>
                <TextInput
                label="Rendez Vous"
-               mode='outlined' style={{marginTop: 10}} theme={{colors: {primary: '#6988cc', background: '#fff' }}}
+               mode='outlined' style={{marginTop: 10}} theme={{colors: {primary: '#9159b8', background: '#fff' }}}
                returnKeyType="next"
                onChangeText={props.handleChange('name')} value={props.values.name} onBlur={props.handleBlur('name')}
                />
@@ -39,7 +39,7 @@ export default function AddRendezVous({ addRendezVous }){
 
               <TextInput
                label="Adresse"
-               mode='outlined' style={{marginTop: 10}} theme={{colors: {primary: '#6988cc', background: '#fff' }}}
+               mode='outlined' style={{marginTop: 10}} theme={{colors: {primary: '#9159b8', background: '#fff' }}}
                returnKeyType="next"
                onChangeText={props.handleChange('adresse')} value={props.values.adresse} onBlur={props.handleBlur('adresse')}
                />
@@ -47,7 +47,7 @@ export default function AddRendezVous({ addRendezVous }){
 
                <TextInput
                label="Date"
-               mode='outlined' style={{marginTop: 10}} theme={{colors: {primary: '#6988cc', background: '#fff' }}}
+               mode='outlined' style={{marginTop: 10}} theme={{colors: {primary: '#9159b8', background: '#fff' }}}
                returnKeyType="next"
                onChangeText={props.handleChange('date')} value={props.values.date} onBlur={props.handleBlur('date')}
                />
@@ -55,7 +55,7 @@ export default function AddRendezVous({ addRendezVous }){
 
                <TextInput
                label="Heure"
-               mode='outlined' style={{marginTop: 10}} theme={{colors: {primary: '#6988cc', background: '#fff' }}}
+               mode='outlined' style={{marginTop: 10}} theme={{colors: {primary: '#9159b8', background: '#fff' }}}
                returnKeyType="next"
                onChangeText={props.handleChange('heure')} value={props.values.heure} onBlur={props.handleBlur('heure')}
                />
