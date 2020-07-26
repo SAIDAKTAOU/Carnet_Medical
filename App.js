@@ -319,7 +319,7 @@ const styles = StyleSheet.create({
     backgroundColor:'#9159b8'
   },
   text_header:{
-    color:'black',
+    color:'white',
     fontWeight:'bold',
     fontSize:30
   },
@@ -334,7 +334,7 @@ const styles = StyleSheet.create({
     borderRadius:10,
    },
    textSignIn:{
-       color:'black',
+       color:'white',
        fontWeight:'bold',
        fontSize:18
    },
