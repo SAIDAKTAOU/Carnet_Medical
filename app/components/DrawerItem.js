@@ -13,7 +13,7 @@ class DrawerItem extends React.Component {
       case "Services d'urgences les plus Proche":
         return (
           <Icon
-            name="shop"
+            name="map-big"
             family="ArgonExtra"
             size={14}
             color={focused ? "white" : argonTheme.COLORS.PRIMARY}
@@ -31,7 +31,7 @@ class DrawerItem extends React.Component {
       case "Laboratoires d'analyse les plus proche":
         return (
           <Icon
-            name="spaceship"
+            name="map-big"
             family="ArgonExtra"
             size={14}
             color={focused ? "white" : argonTheme.COLORS.PRIMARY}
@@ -40,16 +40,16 @@ class DrawerItem extends React.Component {
       case "Haupitaux et Cliniques les plus Proche":
         return (
           <Icon
-            name="chart-pie-35"
+            name="map-big"
             family="ArgonExtra"
             size={14}
-            color={focused ? "white" : argonTheme.COLORS.WARNING}
+            color={focused ? "white" : argonTheme.COLORS.PRIMARY}
           />
         );
       case "CarnetPersonel":
         return (
           <Icon
-            name="calendar-date"
+            name="ungroup"
             family="ArgonExtra"
             size={14}
             color={focused ? "white" : argonTheme.COLORS.INFO}
@@ -57,10 +57,10 @@ class DrawerItem extends React.Component {
         );
       case "Deconnexion":
         return (<Icon
-          name="spaceship"
+          name="padlock-unlocked"
           family="ArgonExtra"
           size={14}
-          color={focused ? "white" : "rgba(0,0,0,0.5)"}
+          color={focused ? "white" : argonTheme.COLORS.WARNING}
         />);
       case "Log out":
         return <Icon />;
