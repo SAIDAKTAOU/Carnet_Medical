@@ -32,28 +32,28 @@ export default function AddControle({ addControle}){
              <View>
                 <TextInput
                label="Docteur"
-               mode='outlined' style={{marginTop: 10}} theme={{colors: {primary: '#6988cc', background: '#fff' }}}
+               mode='outlined' style={{marginTop: 10}} theme={{colors: {primary: '#9159b8', background: '#fff' }}}
                returnKeyType="next"
                onChangeText={props.handleChange('name')} value={props.values.name} onBlur={props.handleBlur('name')} />
               <Text style={globalStyles.errorText}>{props.touched.name && props.errors.name}</Text>
               
               <TextInput
                label="Specialite"
-               mode='outlined' style={{marginTop: 10}} theme={{colors: {primary: '#6988cc', background: '#fff' }}}
+               mode='outlined' style={{marginTop: 10}} theme={{colors: {primary: '#9159b8', background: '#fff' }}}
                returnKeyType="next"
                onChangeText={props.handleChange('specialite')} value={props.values.specialite} onBlur={props.handleBlur('specilite')} />
                <Text style={globalStyles.errorText}>{props.touched.specialite && props.errors.specialite}</Text>
 
                <TextInput
                label="Date"
-               mode='outlined' style={{marginTop: 10}} theme={{colors: {primary: '#6988cc', background: '#fff' }}}
+               mode='outlined' style={{marginTop: 10}} theme={{colors: {primary: '#9159b8', background: '#fff' }}}
                returnKeyType="next"
                onChangeText={props.handleChange('date')} value={props.values.date} onBlur={props.handleBlur('date')} />
                <Text style={globalStyles.errorText}>{props.touched.date && props.errors.date}</Text>
 
                <TextInput
                label="Date"
-               mode='outlined' style={{marginTop: 10}} theme={{colors: {primary: '#6988cc', background: '#fff' }}}
+               mode='outlined' style={{marginTop: 10}} theme={{colors: {primary: '#9159b8', background: '#fff' }}}
                returnKeyType="next"
                onChangeText={props.handleChange('remarque')} value={props.values.remarque} onBlur={props.handleBlur('remarque')} />
                <Text style={globalStyles.errorText}>{props.touched.remarque && props.errors.remarque}</Text>
