@@ -46,7 +46,7 @@ class DrawerItem extends React.Component {
             color={focused ? "white" : argonTheme.COLORS.PRIMARY}
           />
         );
-      case "CarnetPersonel":
+      case "Carnet Personel":
         return (
           <Icon
             name="ungroup"
@@ -57,7 +57,7 @@ class DrawerItem extends React.Component {
         );
       case "Deconnexion":
         return (<Icon
-          name="padlock-unlocked"
+          name="engine-start"
           family="ArgonExtra"
           size={14}
           color={focused ? "white" : argonTheme.COLORS.WARNING}

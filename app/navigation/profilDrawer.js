@@ -173,9 +173,9 @@ export default function ProfilDrawer(props) {
           fontWeight: "normal"
         }
       }}
-      initialRouteName="CarnetPersonel"
+      initialRouteName="Carnet Personel"
     >
-      <Drawer.Screen name="CarnetPersonel" component={CarnetPersonelStack} />
+      <Drawer.Screen name="Carnet Personel" component={CarnetPersonelStack} />
       <Drawer.Screen name="Services d'urgences les plus Proche" component={ServicesUrgenceProcheStack} />
       <Drawer.Screen name="Haupitaux et Cliniques les plus Proche" component={HaupitauxCliniquesProcheStack} />
       <Drawer.Screen name="Laboratoires d'analyse les plus proche" component={LaboAnalyseProcheStack} />

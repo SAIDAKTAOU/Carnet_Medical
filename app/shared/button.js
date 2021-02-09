@@ -24,7 +24,7 @@ const styles = StyleSheet.create({
        marginTop:6,
    } ,
    buttonText:{
-    color:'black',
+    color:'white',
     textTransform:'uppercase',
     fontSize:14,
     textAlign:'center',

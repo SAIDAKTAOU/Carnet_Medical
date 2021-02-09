@@ -13,7 +13,7 @@ import { DrawerItem as DrawerCustomItem } from '../components';
 function CustomDrawerContent({ drawerPosition, navigation, profile, focused, state, ...rest }) {
   const insets = useSafeArea();
   const screens = [
-    "CarnetPersonel", 
+    "Carnet Personel", 
     "Services d'urgences les plus Proche",
     "Haupitaux et Cliniques les plus Proche", 
     "Laboratoires d'analyse les plus proche",
